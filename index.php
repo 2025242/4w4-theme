@@ -1,10 +1,11 @@
 <?php get_header(); ?>
     <main>
+    <pre> front-page.php</pre>
     <h1>Bienvenue sur 4W4</h1>   
     </main>
 
     <?php get_footer(); ?>
-<pre> front-page.php</pre>
+
     <?php
      if (have_posts()):
        while (have_posts()):
