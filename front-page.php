@@ -15,7 +15,7 @@
        <?php the_permalink(); ?> 
       
        </article>
-
+      
      <?php endwhile;?>
      <?php endif;?>
     
@@ -23,4 +23,5 @@
 
 
 </body>
+<?php get__footer(); ?>
 </html>
