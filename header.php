@@ -9,9 +9,12 @@
     <?php wp_head(); ?>
 </head>
 <body class="site">
-<h1><a class="site__titre" href="<?= bloginfo('url'); ?>"><?= bloginfo('name'); ?></a></h1>
-        <h2><?= bloginfo('description'); ?></h2>
+
     <header class="site__entete">
+<h1><a class="site__titre" href="<?= bloginfo('url'); ?>"><?= bloginfo('name'); ?></a></h1>
+        <h2 class="site_description"><?= bloginfo('description'); ?></h2>
+
+        <section class="entete__nav">
        <?php the_custom_logo(); ?> 
        <?php  wp_nav_menu(array( 
                     "menu" => "entete",
@@ -19,6 +22,7 @@
                     "container_class" => "menu__entete"
 
                  )); ?>
+        </section>
        
 </header>
 

@@ -323,8 +323,6 @@ template {
 /* --------------------------------------------- base */
 h1 {
   font-size: clamp(0.75rem, -0.75rem + 4.8vw, 3.75rem);
-  color: rgb(255, 255, 255);
-  text-align: center;
 }
 
 h2 {
@@ -372,69 +370,49 @@ p {
 }
 
 /* ---------------------------- BODY */
-
 .site {
   height: 100%;
-  background-image:url(image/fond.gif);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  
+  background-repeat: no-repeat;
 }
-
 
 /* --------------------------------------------- composant */
-@font-face {
-  font-family:Neon;
-  src: url(NEON____.TTF);
-}
-.site__titre {
-
+.entete__nav {
   display: flex;
-  flex-direction: row;
-  font-family:Neon;
-  color: white;
-  justify-content: center;
-  text-shadow: 0 0 0.2em #5d3bea, 0 0 0.2em #5d3bea, 0 0 0.2em #5d3bea,0 0 0.2em #5d3bea,0 0 0.2em;
-  font-size: 100px;
-  padding: 5px;
-  text-decoration: none;
-  
+  justify-content: space-between;
+  align-items: center;
 }
 
-.site__titre h1 {
+.site__titre {
+  text-decoration: none;
+}
+
+.site__titre {
   font-size: clamp(1rem, 0.3864rem + 2.4545vw, 4.375rem);
 }
 
 /* ///////////////////////////////// menu__entete */
-
 .menu__entete .menu {
-  font-family:Gameplay;
-  text-decoration: none;
-  text-align: center;
-  padding: 15px 10px;
-  color: white;
   display: flex;
   list-style-type: none;
-  justify-content: center;
-  font-size: 30px;
-
+  justify-content: flex-end;
 }
-/*animation hover sur le élément du menu*/
-.menu__entete a:hover {
-  background-image: radial-gradient(#0f0f55, #0026ce, #40cee1, #73e9e9);
-  box-shadow: 0 0 0.2em #5d3bea, 0 0 0.2em #5d3bea, 0 0 0.2em #5d3bea,0 0 0.2em #5d3bea,0 0 0.2em #5d3bea,0 0 0.2em #5d3bea;
-}
-
 .menu__entete .menu .menu-item {
   list-style-type: none;
-  background-color: #d9dae3a4;  
-  width: 20%;
-  padding: 10px;
-  
 }
 .menu__entete .menu .menu-item a {
-  padding: 10px;
-  color: white;
+  padding: 3px 5px;
+}
 
+.blocflex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.blocflex article {
+  flex: 1 0 250px;
+  padding: 5px;
+  margin: 10px;
 }
