@@ -9,24 +9,29 @@
     border: 3px solid black;
     box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px;
     } 
+   
+    //titre de chaque cour 
     h3{
     font-size: 1rem;
     text-decoration: none;
     text-align: center;
-    background-color: rgb(233, 217, 235);
+    background-color: rgb(0, 0, 0);
     }
+    //Paragraphe texte dans les cadre 
     div{
         text-align: center;
         color: rgb(0, 0, 0);
-    }  
+    } 
+    a{
+      color: rgb(255, 236, 253);
+      text-decoration: none;
+    } 
     
 
 }
 
 
-
-
-
+//animation border 
 .card {
   position: relative;
   width: 200px;
