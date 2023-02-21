@@ -1,0 +1,34 @@
+.entete__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.site__titre {
+    text-decoration: none;
+}
+.site__titre {
+    font-size: clamp(1rem, 0.3864rem + 2.4545vw, 4.375rem);
+}
+
+/* ///////////////////////////////// menu__entete */
+.menu__entete{ // nav
+
+    .menu { // ul
+            display : flex;
+            list-style-type: none;
+            justify-content: flex-end;
+        .menu-item { // li 
+            list-style-type: none;
+            a{
+
+                padding : 3px 5px;
+            }
+
+        }
+
+    }
+
+}
