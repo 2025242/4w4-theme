@@ -371,7 +371,12 @@ p {
 
 /* ---------------------------- BODY */
 .site {
-  background-color: rgb(255, 255, 255);
+  background-image: url(image/fond2.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 h1 {
