@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <main>
+    <main class= "site__main">
     
     </main>
 

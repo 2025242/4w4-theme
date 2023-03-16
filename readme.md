@@ -1,4 +1,4 @@
-# Laboratoire #1
+# TP1 #1
 ## 4W4-Conception d'interfaces et développement Web
 ### Auteur : Eddy Martin
 

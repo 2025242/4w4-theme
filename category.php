@@ -1,26 +1,33 @@
+<?php 
+/**
+ * category.php est le modèle par défaut pour 
+ * afficher une archive d'articles de catégorie spécifique 
+ */
+?>
+
 <?php get_header(); ?>
-<main>
-<section class="blocflex">
-<?php /** category par defaut du theme */ ?><?php get_header(); ?><main class="site__main">   <section class="blocflex">      <?php
+<main class="site__main">
+   <section class="blocflex">
+      <?php
       $category = get_queried_object();
-      // permet d utiliser la nouevlle requette
+      // Permet de définir la nouvelle requête
       $args = array(
          'category_name' => $category->slug,
          'orderby' => 'title',
          'order' => 'ASC'
       );
-      //creation d une nouvelle requette
+      // Création d'une nouvelle requête
       $query = new WP_Query( $args );
-      // tout le reste de l extraction est base sur wp_query 
+      // Tout le reste de l'extraction de données est basée 
+      // sur la nouvelle requête contenu dans $query
       if ( $query->have_posts() ) :
-         while ( $query->have_posts() ) : $query->the_post(); ?>            
-         <article>               
-        <h3><a href="<?php the_permalink(); ?>"> <?= get_the_title(); ?></a></h3>               
-        <p><?= wp_trim_words(get_the_excerpt(), 15) ?></p>            
-        </article>         
-        <?php endwhile; ?>      
-        <?php endif;
-      wp_reset_postdata();?>   
-      </section>
-   </main>    
-      <?php get_footer(); ?>
+         while ( $query->have_posts() ) : $query->the_post();
+         get_template_part("template-parts/categorie", $category->slug);
+         ?>
+            
+         <?php endwhile; ?>
+      <?php endif;
+      wp_reset_postdata();?>
+   </section>
+</main>
+<?php get_footer(); ?>

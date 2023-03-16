@@ -28,6 +28,10 @@
             display : flex;
             list-style-type: none;
             justify-content: flex-end;
+            flex-direction: column;
+            @media screen and (min-width:1000px) {
+              flex-direction: row;
+            }
         .menu-item { // li 
             list-style-type: none;
             a{
