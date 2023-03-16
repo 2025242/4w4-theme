@@ -1,0 +1,49 @@
+/**
+Mise en page générale avec display:grid
+*/
+
+
+.site__entete {
+  grid-area: header;
+  padding: 1rem clamp(1rem, 3vw, 20rem);
+  
+ 
+  }
+
+
+.site__main {
+  grid-area: main;
+  // padding: 1rem clamp(1rem, 3vw, 20rem);
+  background-color: rgb(255, 255, 255);
+}
+
+.site__footer{
+  grid-area: footer;
+  // padding: 1rem clamp(1rem, 3vw, 20rem);
+  background-color: rgb(255, 255, 255);
+}
+
+.site__aside{
+  grid-area: aside;
+  // padding: 1rem clamp(1rem, 3vw, 20rem);
+  background-color: rgba(253, 224, 253, 0.754);
+}
+
+
+.site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "header"
+    "aside"
+    "main"
+    "footer";
+  //row-gap: 50px;
+  @media screen and (min-width:1000px) {
+      grid-template-columns: 20% auto; 
+      grid-template-areas:
+      "header header"
+      "aside main"
+      "footer footer";
+  }
+}

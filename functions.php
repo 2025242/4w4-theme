@@ -37,9 +37,29 @@ add_theme_support( 'custom-logo', array(
  */
 function cidweb_modifie_requete_principal( $query ) {
         if ( $query->is_home() && $query->is_main_query() && ! is_admin() ) {
-          $query->set( 'category_name', '4w4' );
+          $query->set( 'category_name', 'note-4w4' );
           $query->set( 'orderby', 'title' );
           $query->set( 'order', 'ASC' );
           }
          }
          add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' );
+         /**
+ * Permet de personnalisé chacun des titre du menu cours
+ * @param $title : titre du menu à modifier
+ *         $item : la structure «li» du menu
+ *         $args : objet décrivant l'ensemble des menu de notre site
+ *         $depth : Niveau de profondeur du menu (on a retirer ici)     
+ */
+
+function perso_menu_item_title($title, $item, $args) {
+        // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
+        if($args->menu == 'cours') { // on filtre uniquement le menu «cours»
+        // Modifier la longueur du titre en fonction de nos besoins
+        $sigle = substr($title,4,3);
+        $title = substr($title, 7);
+        $title = "<code>" .$sigle. "</code>" . "<p>" . wp_trim_words($title, 1, ' ... ') . "</p>" ; // A modifier am.liorer pour le tp1
+        }
+        return $title;
+        }
+        add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);
+         
