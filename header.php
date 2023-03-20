@@ -35,10 +35,10 @@
 </header>
 
 <aside class="site__aside">
-    <h3>Menu secondaire</h3>
+    <h3 class="menu secondaire">Menu secondaire</h3>
 
     <?php 
-        $menu = "note-4w4";
+        $menu= "note-4w4";
         if (in_category('cours')){
             $menu = "cours";
         }

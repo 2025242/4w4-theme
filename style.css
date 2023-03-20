@@ -530,15 +530,23 @@ ol li {
   transform: translateX(0);
 }
 
-.menu-cours-container {
-  flex-direction: column;
-}
-
 @media screen and (min-width: 800px) {
   .burger {
     display: none;
   }
 }
+#menu-cours {
+  flex-direction: column;
+}
+
+#menu-note-4w4 {
+  flex-direction: column;
+}
+
+.menu__secondaire {
+  text-align: center;
+}
+
 .blocflex {
   display: flex;
   justify-content: space-between;
