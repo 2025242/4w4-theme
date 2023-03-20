@@ -2,21 +2,20 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    article{
-    flex: 1 0 250px;
-    padding: 8px;
-    margin: 25px;
-    border: 3px solid black;
-    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px;
-    } 
-   
-    //titre de chaque cour 
-    h3{
-    font-size: 1rem;
-    text-decoration: none;
-    text-align: center;
     
-    }
+    } 
+    .blocflex__article{
+      flex: 1 0 250px;
+      padding: 8px;
+      margin: 25px;
+      border: 3px solid rgb(255, 255, 255);
+      box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px;
+   }
+   .blocflex__galerie{
+    flex:1 0 100%;
+   }
+   
+   
     //Paragraphe texte dans les cadre 
     p{
         text-align: center;
@@ -28,7 +27,7 @@
     } 
     
 
-}
+
 .note{
   
     a{

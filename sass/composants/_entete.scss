@@ -22,21 +22,40 @@
 }
 
 /* ///////////////////////////////// menu__entete */
-.menu__entete{ // nav
+.menu__entete{ 
 
+            transform: translateX(3000px);
+            transition: transform 0.5s;
+}
+           @media screen and (min-width: 800px) {
+            .menu__entete {
+            transform: translateX(0);
+          }
+}
+@media screen and (min-width: 800px) {
+  .menu__entete .menu {
+    flex-direction: row;
+    align-items: center;
+  }
+}
     .menu { // ul
-            display : flex;
-            list-style-type: none;
-            justify-content: flex-end;
-            flex-direction: column;
+              display : flex;
+              list-style-type: none;
+              justify-content: flex-end;
+              flex-direction: column;
+
             @media screen and (min-width:1000px) {
               flex-direction: row;
+              
             }
+           
         .menu-item { // li 
-            list-style-type: none;
+               list-style-type: none;
             a{
-                text-decoration: none;
-                padding : 5px 6px;
+               text-decoration: none;
+               padding : 5px 6px;
+            }
+              
             }
           
               a {
@@ -93,6 +112,19 @@
 
         }
 
-    }
-
+#chkBurger{
+  display: none;
 }
+#chkBurger:checked ~ .menu__entete {
+  transform: translateX(0);
+}
+.menu-cours-container{
+  flex-direction: column;
+}
+@media screen and (min-width: 800px) {
+  .burger {
+    display: none;
+  }
+}
+
+

@@ -436,25 +436,41 @@ ol li {
 }
 
 /* ///////////////////////////////// menu__entete */
-.menu__entete .menu {
+.menu__entete {
+  transform: translateX(3000px);
+  transition: transform 0.5s;
+}
+
+@media screen and (min-width: 800px) {
+  .menu__entete {
+    transform: translateX(0);
+  }
+}
+@media screen and (min-width: 800px) {
+  .menu__entete .menu {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.menu {
   display: flex;
   list-style-type: none;
   justify-content: flex-end;
   flex-direction: column;
 }
 @media screen and (min-width: 1000px) {
-  .menu__entete .menu {
+  .menu {
     flex-direction: row;
   }
 }
-.menu__entete .menu .menu-item {
+.menu .menu-item {
   list-style-type: none;
 }
-.menu__entete .menu .menu-item a {
+.menu .menu-item a {
   text-decoration: none;
   padding: 5px 6px;
 }
-.menu__entete .menu .menu-item a {
+.menu a {
   position: relative;
   display: block;
   text-transform: uppercase;
@@ -468,7 +484,7 @@ ol li {
   transition: 0.5s;
   z-index: 1;
 }
-.menu__entete .menu .menu-item a:before {
+.menu a:before {
   content: "";
   position: absolute;
   top: 0;
@@ -481,7 +497,7 @@ ol li {
   opacity: 0;
   transition: 0.3s;
 }
-.menu__entete .menu .menu-item a:after {
+.menu a:after {
   content: "";
   position: absolute;
   top: 2px;
@@ -494,39 +510,58 @@ ol li {
   transition: 0.3s;
   z-index: -1;
 }
-.menu__entete .menu .menu-item a:hover {
+.menu a:hover {
   color: rgb(254, 142, 241);
 }
-.menu__entete .menu .menu-item a:hover:before {
+.menu a:hover:before {
   transform: scaleY(1);
   opacity: 1;
 }
-.menu__entete .menu .menu-item a:hover:after {
+.menu a:hover:after {
   transform: scaleY(1);
   opacity: 1;
 }
 
+#chkBurger {
+  display: none;
+}
+
+#chkBurger:checked ~ .menu__entete {
+  transform: translateX(0);
+}
+
+.menu-cours-container {
+  flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+  .burger {
+    display: none;
+  }
+}
 .blocflex {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.blocflex article {
+
+.blocflex__article {
   flex: 1 0 250px;
   padding: 8px;
   margin: 25px;
-  border: 3px solid black;
+  border: 3px solid rgb(255, 255, 255);
   box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px;
 }
-.blocflex h3 {
-  font-size: 1rem;
-  text-decoration: none;
+
+.blocflex__galerie {
+  flex: 1 0 100%;
+}
+
+p {
   text-align: center;
 }
-.blocflex p {
-  text-align: center;
-}
-.blocflex a {
+
+a {
   color: rgb(0, 0, 0);
   text-decoration: none;
   text-align: center;
@@ -570,4 +605,4 @@ Mise en page générale avec display:grid
     grid-template-columns: 20% auto;
     grid-template-areas: "header header" "aside main" "footer footer";
   }
-}
+}/*# sourceMappingURL=style.css.map */
