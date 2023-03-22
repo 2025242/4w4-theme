@@ -134,5 +134,26 @@
 .menu__secondaire{
   text-align: center;
 }
+#menu-cours .menu{
+  font-size: 0.5em;
+  padding: 2px 3px;
+  color: red;
+}
+////////////////////////////////menu footer ////////////////////
+.site_footer {
+  color: #262626;
+  background-color: rgb(23, 13, 117);
+}
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #262626;
+
+}
+.texte_footer{
+  color: aliceblue;
+}
 
 
