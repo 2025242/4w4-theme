@@ -1,17 +1,9 @@
 # TP1 #1
-## 4W4-Conception d'interfaces et développement Web
-### Auteur : Eddy Martin
+## Examen intra 4W4-examen intra
+### Auteur :salma bourakkadi
+### Examen intra 4W4
 
 #### Objectifs
-- Installer Wordpress localement
-- Réaliser une première version d'un thème
-
-#### Liens de référence
-- Site du prof sur **siteground**
-    - https://eddytuto.sg-host.com/
-- Github **eddytuto**    
-- https://github.com/eddytuto
-- https://fr.wordpress.org/
-- Pour visualise sur VC installer  « Markdown preview »
-- Pour activer `ctrl-shift-v`
-- https://developer.wordpress.org/themes/basics/
+- Adapter le modèle 404.php pour reproduire la maquette du devis
+#### Liens de référence   
+- https://cidweb25.sg-host.com/404
