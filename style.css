@@ -603,6 +603,14 @@ a {
   text-align: center;
 }
 
+.recherche {
+  text-align: center;
+}
+
+.brecherche {
+  justify-content: center;
+}
+
 /**
 Mise en page générale avec display:grid
 */
